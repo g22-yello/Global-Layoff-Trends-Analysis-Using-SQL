@@ -4,68 +4,82 @@
 
 ---
 
-## 📌 Project Overview
+## 🧠 Project Overview
 
-Conducted data cleaning and exploratory analysis of a global layoffs dataset containing fields such as company, location, total_laid_off, percentage_laid_off, industry, stage, funds_raised, and country. Used SQL to detect data inconsistencies, standardize company and industry names, and uncover trends in layoffs across sectors and regions since 2020.
+This project performs **data cleaning and exploratory data analysis (EDA)**  on a worldwide layoffs dataset (from 2020 to 2025) to identify patterns and trends related to layoffs during and after the COVID-19 pandemic.
+Using SQL, I explored layoffs by industry, company, country, year, and company stage, uncovering how different sectors were impacted and how global layoff trends evolved over time.
 
 ---
 
-## 📂 About the Coffee Quality Institute (CQI) Dataset
+## 📂 About the World layoff dataset
 
-The dataset contains:
-- Sensory evaluations (quality scores): Aroma, Flavor, Aftertaste, Acidity, Body, Balance, Uniformity, Clean Cup, Sweetness
-- Overall score: Total Cup Points (sum of the sensory features above)
-- Defects: Category One (black beans, sour beans, insect-damaged, etc.) and Category Two (over-fermentation, staleness, rancidness, etc.)
-- Other metadata: Country of origin, processing methods, elevation, variety, and more
+The dataset:
+  Content: Layoffs from global tech companies during 2020 to date
+  Columns include:
+  1. company 
+  2. location  
+  3. total_laid_off 
+  4. date
+  5. percentage_laid_off 
+  6. industry 
+  7. source 
+  8. stage  
+  9. funds_raised
+  10. country 
+  11. date_added 
+
+Source: https://www.kaggle.com/datasets/swaptr/layoffs-2022 | GitHub (via Alex The Analyst Bootcamp)
 
 ---
 
 ## 🎯 Objectives
 
-The primary goal of this project is to understand what drives coffee quality. Specifically, we aim to answer:
-
-1) What are the key determinants of coffee quality as evaluated through sensory attributes (aroma, flavor, acidity, etc.)?
-2) Is there a correlation between processing methods, origin regions, and coffee quality scores?
-3) What trends or patterns exist in defect occurrences, and how do they impact overall coffee quality?
-4) How do different variables interact to influence Total Cup Points, the overall measure of coffee quality?
+- Data cleaning (handling nulls, trimming spaces, standardizing columns)
+- Aggregations (SUM, COUNT, GROUP BY)
+- Ranking and window functions (RANK, DENSE_RANK, CTEs)
+- Trend analysis (monthly/yearly layoffs)
+- Identifying unique and repeated company layoffs
 
 ---
 
 ## 🛠️ Tools & Techniques
 
-- Data Cleaning & Transformation: Google sheets, Power Query (Power BI)
-- Data Analysis & Visualization: Power BI (DAX, interactive reports)
-
----
-
-## 📸 Dashboard Preview
-
-![](Dashboard_overview.png)
-
----
-
-## Visualization 
-
-The Interactive report comprises of 8 pages:
-1) Overview
-2) Sensory Evaluation Page
-3) SEP correlation
-4) SEP Heatmap Matrix
-5) Agronomic Factors
-6) Defects summary
-7) Coffee bean colors
-8) Quality Analysis
-
+  - SQL (MySQL)
+  - Data Cleaning (handling nulls, duplicates, inconsistent categories)
+  - Exploratory Data Analysis (aggregations, window functions, ranking)
+  - Business Trend Analysis
+    
 ---
 
 ## 🚀 Key Insights
 
-- Ethiopia, Taiwan, and Tanzania produce some of the highest-quality coffees.
-- Sensory Drivers: Aroma, Flavor, and Acidity are the strongest contributors to higher cup scores.
-- Varietal Excellence: Castillo, Red Bourbon, and SL34+Gesha rank among the top varieties for coffee quality.
-- Processing Methods: Techniques such as Double Anaerobic Washed, Semi-Washed, and Honey/Mossto strongly influence quality outcomes.
-- Defects: Category Two defects are the most frequent and have a significant negative impact on cup scores.
-- Environmental Factors: Moisture levels and altitude also affect production quality.
+1. **Intel** recorded the highest total layoffs (**43,115 employees**), followed by **Microsoft (30,055)** and **Amazon (27,940)**.  
+2. **Maximum single-company layoff:** 22,000 employees (100% layoffs — company shutdown).  
+3. A total of **331 companies** went completely under (100% layoffs).  
+4. Dataset date range: **March 11, 2020 → October 1, 2025**.  
+5. **Top 3 industries affected:** Hardware, Other, and Consumer.  
+6. **Top 3 countries affected:** United States, India, and Germany.  
+7. **Yearly layoffs trend:** 2023 had the highest layoffs, followed by 2022 and 2024.  
+8. **Top companies with multiple rounds of layoffs:** Rivian, Blend, Cue Health, F5, Lyft, Outreach, Peloton, Redfin, Salesforce, ShareChat, Swiggy, and Unity.  
+9. **Stage most affected:** Post-IPO companies (**451,029 layoffs**).  
+10. **Healthcare industry impact:** United States, Netherlands, and India most affected.  
+11. **Total layoffs (2020–2025):** **769,596 employees**.  
+12. **Top 3 layoffs in Bengaluru:** Ola Electric (1,000), VerSe Innovation (350), and Mobile Premier League (300).  
+13. **Consistent trend:** Intel, Microsoft, Amazon, and Meta ranked among top companies with layoffs each year.  
+14. **Companies with most frequent layoffs:** Microsoft (30,055), Amazon (27,940), Salesforce (16,525), and Google (13,547).  
+15. **Monthly layoff peaks:**  
+    - 2020 → April (26.7K) — COVID-19 onset  
+    - 2021 → January (6.8K)  
+    - 2022 → November (53.6K)  
+    - 2023 → January (89.7K) — Global tech layoffs  
+    - 2024 → January (34.1K)  
+    - 2025 → April (24.5K)
 
-*Final Insight: High grade speciality coffee distinction arises from the interplay of origin, processing, defect control, and sensory experience.*
+*Final Insight: Global layoffs peaked in 2023, driven largely by large tech companies such as Intel, Microsoft, Amazon, and Meta — reflecting a major industry-wide restructuring following post-pandemic growth.*
+
+---
+
+## 📅 Future Improvements
+- Add Power BI dashboard for visual insights  
+- Automate query execution and updates with Python
 
